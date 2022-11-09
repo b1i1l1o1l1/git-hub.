@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #00136c;
+}
+
+.container {
+  display: flex;
+  grid-gap: 10px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  color: #00136c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: 0.5s ease-in-out;
+}
+
+.box:nth-child(1) {
+  background-color: red;
+  animation: myanime 2s infinite;
+}
+
+.box:nth-child(2) {
+  background-color: green;
+  animation: myanime 3s infinite;
+}
+
+.box:nth-child(3) {
+  background-color: white;
+  animation: myanime 4s infinite;
+}
+
+.box:nth-child(4) {
+  background-color: blue;
+  animation: myanime 5s infinite;
+}
+
+@keyframes myanime {
+  0% {
+    rotate: (0deg);
+  }
+
+  25% {
+    rotate:  (90deg);
+    scale: 0.5;
+  }
+
+  50% {
+    rotate: y (180deg);
+  }
+
+  75% {
+    rotate: x (270deg);
+    border-radius: 50%;
+  }
+
+  100% {
+    rotate: (360deg);
+  }
+}
+
+@supports not (rotate: 0deg) {
+  @keyframes myanime {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    25% {
+      transform: scale(0.5) rotateY(90deg);
+    }
+
+    50% {
+      transfrom: rotate(180deg);
+    }
+
+    75% {
+      transform: rotateX(270deg);
+      border-radius: 50%;
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

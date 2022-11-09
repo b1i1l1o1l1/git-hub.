@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: dodgerblue;
+}
+
+.container{
+    width: 500px;
+    height: 500px;
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 250px;
+    height: 250px;
+    background-color: aqua;
+    animation: myanime 1s infinite;
+    animation-duration: 5s;
+}
+
+@keyframes myanime{
+    0%{
+        transform: rotateX(0deg);
+    }
+
+    25%{
+        transform: rotateY(200deg);
+    }
+
+    50%{
+        transform: rotateX(200deg);
+    }
+
+    100%{
+        transform: rotateX(200deg);
+    }
+}
+

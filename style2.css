@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: dodgerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 20px;
+    height: 50px;
+    background-color: #fff;
+    animation: myanime 2s infinite linear;
+    animation-duration: 2s;
+    position: absolute;
+    left: 650px;
+}
+
+.box1 {
+    width: 20px;
+    height: 50px;
+    background-color: #fff;
+    animation: myanim 1s infinite linear;
+    animation-duration: 1s;
+    position: absolute;
+    left: 680px;
+}
+
+.box2 {
+    width: 20px;
+    height: 50px;
+    background-color: #fff;
+    animation: anime 1s infinite linear;
+    animation-duration: .7s;
+    position: absolute;
+    left: 710px;
+}
+
+@keyframes myanime {
+    20% {
+        transform: scaleY(2.5);
+    }
+}
+
+@keyframes myanim {
+    20% {
+        transform: scaleY(2);
+    }
+}
+
+@keyframes anime {
+    20% {
+        transform: scaleY(2);
+    }
+}
